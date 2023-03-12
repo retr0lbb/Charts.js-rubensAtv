@@ -23,8 +23,8 @@ const config = {
     data: {
         labels: labels,
         datasets: [{
-            label:"Lixo no senac",
-            data: [66,78,23,44],// Aqui voce muda os valores das barras baseado nas contas que tu fez ai seguindo a ordem: papel plastico vidro e metal
+            label:"Lixo na MED5",
+            data: [199,167,11,0],// Aqui voce muda os valores das barras baseado nas contas que tu fez ai seguindo a ordem: papel plastico vidro e metal
             fill: false,
             borderColor: "rgb(0,0,0)",
             borderWidth: 1,
@@ -33,8 +33,8 @@ const config = {
 
         },
         {
-            label:"Lixo na cidade",
-            data: [300,738,2113,434],
+            label:"Lixo do senac",
+            data: [642,773,391,460],
             fill: false,
             borderColor: "rgb(0,0,0)",
             borderWidth: 1,
@@ -42,8 +42,8 @@ const config = {
             pointRadius: 5,
             backgroundColor: "rgba(89,5,200, 0.3)",
 
-        }
-    
+        },
+       
         ]
     },
     options: {
@@ -63,13 +63,6 @@ const config = {
 };
 
 var myLineChart = new Chart(ctx, config);
-
-document.addEventListener('keydown', function(event) {
-			if (event.key === 'Enter') { // aqui você pode substituir 'Enter' pela tecla que deseja detectar
-				window.location.href = 'config.html'; // aqui você pode substituir 'nova_pagina.html' pela URL da página que deseja abrir
-			}
-		});
-
 </script>
 </body>
 
