@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas class="line-chart"></canvas>
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+
+var ctx = document.querySelector(".line-chart");
+const labels = ["Papel", "Plastico","Vidro","Metal" ]// Vc vai mudar as Tabelas aqui 
+
+
+const config = {
+    type: 'bar',
+    data: {
+        labels: labels,
+        datasets: [{
+            label:"Lixo no senac",
+            data: [66,78,23,44],// Aqui voce muda os valores das barras baseado nas contas que tu fez ai seguindo a ordem: papel plastico vidro e metal
+            fill: false,
+            borderColor: "rgb(0,0,0)",
+            borderWidth: 1,
+            borderColor: "rgb(0,0,0)",
+            backgroundColor: "rgba(66,133,244, 0.3)",
+
+        },
+        {
+            label:"Lixo na cidade",
+            data: [300,738,2113,434],
+            fill: false,
+            borderColor: "rgb(0,0,0)",
+            borderWidth: 1,
+            borderColor: "rgb(0,0,0)",
+            pointRadius: 5,
+            backgroundColor: "rgba(89,5,200, 0.3)",
+
+        }
+    
+        ]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        },
+        plugins: {
+            title: {
+                display: true,
+                text: 'Lixo Produzido no Bairro',
+                fullSize: true
+            }
+        }
+    },
+};
+
+var myLineChart = new Chart(ctx, config);
+
+document.addEventListener('keydown', function(event) {
+			if (event.key === 'Enter') { // aqui você pode substituir 'Enter' pela tecla que deseja detectar
+				window.location.href = 'config.html'; // aqui você pode substituir 'nova_pagina.html' pela URL da página que deseja abrir
+			}
+		});
+
+</script>
+</body>
+
+</html>
